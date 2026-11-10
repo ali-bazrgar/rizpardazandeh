@@ -160,10 +160,19 @@ function showStep(index) {
 document.querySelector('#codePrev').addEventListener('click', () => showStep(activeStep - 1));
 document.querySelector('#codeNext').addEventListener('click', () => showStep(activeStep + 1));
 showStep(0);
-if (!location.hash) {
-  history.scrollRestoration = 'manual';
-  window.scrollTo(0, 0);
+
+// Start the presentation at its opening scene, even if the browser restores an old scroll position.
+history.scrollRestoration = 'manual';
+function resetPresentationPosition() {
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 }
+resetPresentationPosition();
+window.addEventListener('load', () => {
+  requestAnimationFrame(() => requestAnimationFrame(resetPresentationPosition));
+}, { once: true });
+window.addEventListener('pageshow', resetPresentationPosition);
 
 const scenes = [...document.querySelectorAll('[data-scene]')];
 let currentScene = 0;
