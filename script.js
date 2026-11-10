@@ -126,6 +126,7 @@ codeNode.innerHTML = groups.map((line, i) => {
 
 let activeStep = 0;
 const dots = document.querySelector('#stepDots');
+const codeScroller = document.querySelector('.code-scroll');
 stepInfo.forEach((step, index) => {
   const dot = document.createElement('button');
   dot.className = 'step-dot';
@@ -146,11 +147,23 @@ function showStep(index) {
     line.classList.toggle('active-line', n >= step.range[0] && n <= step.range[1]);
   });
   const first = codeNode.querySelector('[data-line="' + step.range[0] + '"]');
-  if (first) first.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  if (first) {
+    const pane = codeScroller.getBoundingClientRect();
+    const line = first.getBoundingClientRect();
+    if (line.top < pane.top) {
+      codeScroller.scrollTo({ top: codeScroller.scrollTop + line.top - pane.top - 12, behavior: 'smooth' });
+    } else if (line.bottom > pane.bottom) {
+      codeScroller.scrollTo({ top: codeScroller.scrollTop + line.bottom - pane.bottom + 12, behavior: 'smooth' });
+    }
+  }
 }
 document.querySelector('#codePrev').addEventListener('click', () => showStep(activeStep - 1));
 document.querySelector('#codeNext').addEventListener('click', () => showStep(activeStep + 1));
 showStep(0);
+if (!location.hash) {
+  history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+}
 
 const scenes = [...document.querySelectorAll('[data-scene]')];
 let currentScene = 0;
