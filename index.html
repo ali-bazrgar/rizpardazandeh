@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="ارائهٔ تعاملی پروژهٔ فاصله‌سنج فراصوت با آردوینو نانو">
+  <title>از فاصله تا نور | ارائهٔ پروژه</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#intro"><span class="wordmark-dot"></span>آزمایشگاه ریزپردازنده</a>
+    <div class="top-actions"><span class="live-label"><i></i> ارائهٔ تعاملی</span></div>
+  </header>
+  <div class="progress-track"><span id="progress"></span></div>
+  <main>
+    <section class="scene intro" id="intro" data-scene>
+      <div class="intro-copy reveal">
+        <span class="kicker"><span class="kicker-line"></span> پروژهٔ سامانهٔ اندازه‌گیری فاصله</span>
+        <h1>از <span class="gradient-text">فاصله</span><br>تا <span class="outline-text">نور</span></h1>
+        <p class="intro-lead">پروژهٔ اندازه‌گیری فاصله با حسگر فراصوت و آردوینو نانو</p>
+        <div class="presentation-credits">
+          <div><span>ارائه‌دهنده</span><b>علی بذرگر</b></div>
+          <div><span>استاد</span><b>دکتر مجید محبی</b></div>
+          <div><span>درس</span><b>آزمایشگاه ریز پردازنده</b></div>
+          <div><span>دانشگاه</span><b>دانشگاه آزاد واحد پردیس</b></div>
+        </div>
+        <button class="primary-button" data-go="#components">شروع ارائه <span>←</span></button>
+      </div>
+      <div class="hero-art reveal">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <figure class="hero-photo"><img src="all.jpg" alt="عکس واقعی از پروژهٔ فاصله‌سنج پیاده‌سازی‌شده روی بردبورد" class="asset-img"><figcaption><span class="photo-live"></span> نمونهٔ پیاده‌سازی‌شدهٔ پروژه</figcaption></figure>
+        <div class="hero-caption"><span>حسگر</span><b>→</b><span>پردازش</span><b>→</b><span>نور</span></div>
+      </div>
+      <div class="scene-index"><b>۰۱</b><span>آغاز</span></div>
+      <div class="scroll-cue"><span></span> برای ادامه پیمایش کنید</div>
+    </section>
+
+    <section class="scene components" id="components" data-scene>
+      <div class="section-heading reveal"><span class="eyebrow">۰۱ / اجزای سامانه</span><h2>هر قطعه، یک نقش</h2><p>قبل از دیدن مدار، با بازیگران اصلی این سامانه آشنا شویم.</p></div>
+      <div class="component-grid">
+        <article class="component-card reveal" style="--delay:0ms"><div class="component-image"><img src="sensor.png" alt="حسگر اولتراسونیک HC-SR04" class="asset-img"><span class="image-glow"></span></div><div class="component-meta"><span>ورودی</span><b>۰۱</b></div><h3>حسگر فراصوت</h3><p>زمان رفت‌وبرگشت موج صوتی را اندازه می‌گیرد تا فاصلهٔ مانع به دست بیاید.</p></article>
+        <article class="component-card reveal" style="--delay:90ms"><div class="component-image"><img src="res.png" alt="مقاومت ۴۱۰ اهم" class="asset-img"><span class="image-glow"></span></div><div class="component-meta"><span>محافظ جریان</span><b>۰۲</b></div><h3>مقاومت</h3><p>جریان LED را محدود می‌کند. مقدار استفاده‌شده در این مدار ۴۱۰ اهم است.</p></article>
+        <article class="component-card reveal" style="--delay:180ms"><div class="component-image"><img src="led.jpg" alt="دیود نورافشان LED" class="asset-img"><span class="image-glow"></span></div><div class="component-meta"><span>خروجی</span><b>۰۳</b></div><h3>دو LED</h3><p>با هم چشمک می‌زنند؛ ریتم آن‌ها نشان می‌دهد مانع در کدام بازهٔ فاصله است.</p></article>
+        <article class="component-card reveal" style="--delay:270ms"><div class="component-image"><img src="breadboard.png" alt="بردبورد بدون لحیم‌کاری" class="asset-img"><span class="image-glow"></span></div><div class="component-meta"><span>بستر اتصال</span><b>۰۴</b></div><h3>بردبورد</h3><p>قطعات و سیم‌ها را بدون لحیم‌کاری به هم متصل می‌کند تا مدار نمونه‌سازی شود.</p></article>
+        <article class="component-card reveal" style="--delay:360ms"><div class="component-image"><img src="dc.png" alt="ماژول تغذیهٔ بردبورد" class="asset-img"><span class="image-glow"></span></div><div class="component-meta"><span>تغذیه</span><b>۰۵</b></div><h3>ماژول تغذیه</h3><p>ورودی DC یا USB را به ریل‌های تغذیهٔ بردبورد می‌رساند؛ جامپر روی ۵ ولت قرار می‌گیرد.</p></article>
+      </div>
+      <div class="scene-index"><b>۰۲</b><span>قطعات</span></div>
+    </section>
+
+    <section class="scene sensor-story" id="sensor" data-scene>
+      <div class="sensor-visual reveal"><img src="sensor.png" alt="نمای حسگر HC-SR04" class="asset-img"><span class="sonar-ring r1"></span><span class="sonar-ring r2"></span><span class="sonar-ring r3"></span><div class="distance-pill">موج صوتی <b>↔</b> بازتاب</div></div>
+      <div class="story-copy reveal"><span class="eyebrow">۰۲ / حسگر فاصله</span><h2>اندازه‌گیری با پژواک</h2><p>حسگر HC-SR04 یک موج فراصوت می‌فرستد و منتظر بازگشت آن می‌ماند. با دانستن مدت رفت‌وبرگشت موج، می‌توان فاصله را محاسبه کرد.</p><div class="mini-flow"><span>ارسال موج</span><i></i><span>برخورد با مانع</span><i></i><span>دریافت پژواک</span></div><div class="pin-note"><b>چهار پایه</b><span>VCC · TRIG · ECHO · GND</span></div></div>
+      <div class="scene-index"><b>۰۳</b><span>حسگر</span></div>
+    </section>
+
+    <section class="scene details-scene" id="details" data-scene>
+      <div class="section-heading reveal"><span class="eyebrow">۰۳ / خروجی و اتصال</span><h2>نورِ کنترل‌شده</h2><p>مقاومت از LED محافظت می‌کند؛ بردبورد مسیر اتصال‌ها را مرتب نگه می‌دارد.</p></div>
+      <div class="details-layout">
+        <div class="detail-tile reveal"><div class="detail-photo"><img src="res.png" alt="مقاومت ۴۱۰ اهم" class="asset-img"></div><div><span class="eyebrow">۴۱۰ Ω</span><h3>مقاومت سری</h3><p>کد رنگی زرد، قهوه‌ای، قهوه‌ای، طلایی؛ برای هر LED یک مقاومت جداگانه.</p></div></div>
+        <div class="detail-tile reveal"><div class="detail-photo led-photo"><img src="led.jpg" alt="LED" class="asset-img"></div><div><span class="eyebrow">دو خروجی</span><h3>LEDها</h3><p>آند هر LED از مسیر مقاومت به خروجی خودش می‌رود؛ کاتد هر دو به زمین مشترک وصل می‌شود.</p></div></div>
+        <div class="detail-tile reveal"><div class="detail-photo"><img src="breadboard.png" alt="بردبورد" class="asset-img"></div><div><span class="eyebrow">بدون لحیم</span><h3>بردبورد</h3><p>سوراخ‌های هر گروه، اتصال الکتریکی مشترک دارند؛ ریل‌های کناری بعضی بردها در میانه قطع‌اند.</p></div></div>
+      </div>
+      <div class="scene-index"><b>۰۴</b><span>خروجی</span></div>
+    </section>
+
+    <section class="scene power-scene" id="power" data-scene>
+      <div class="power-copy reveal"><span class="eyebrow">۰۴ / انرژی سامانه</span><h2>تغذیهٔ پایدار</h2><p>ماژول تغذیهٔ بردبورد، ورودی DC یا USB را به ریل‌های تغذیه می‌رساند. برای این مدار خروجی روی ۵ ولت تنظیم می‌شود و زمین آردوینو، حسگر و LEDها مشترک است.</p><div class="power-stats"><div><b>۵V</b><span>خروجی انتخاب‌شده</span></div><div><b>DC</b><span>ورودی ماژول</span></div><div><b>GND</b><span>مرجع مشترک</span></div></div></div>
+      <div class="power-image reveal"><div class="power-halo"></div><img src="dc.png" alt="منبع تغذیهٔ DC" class="asset-img"></div>
+      <div class="scene-index"><b>۰۵</b><span>تغذیه</span></div>
+    </section>
+
+    <section class="scene diagram-scene" id="diagram" data-scene>
+      <div class="section-heading reveal"><span class="eyebrow">۰۵ / نقشهٔ مدار</span><h2>مسیر هر اتصال</h2><p>نقشهٔ سیم‌کشی، جای هر قطعه و ارتباط آن را با آردوینو نشان می‌دهد.</p></div>
+      <div class="diagram-frame reveal"><img src="etesalat.jpg" alt="نقشهٔ اتصالات مدار" class="asset-img"><div class="diagram-placeholder"><span>⌁</span><b>etesalat.jpg</b><small>تصویر نقشه را در کنار فایل‌های سایت قرار دهید.</small></div><div class="frame-corner c1"></div><div class="frame-corner c2"></div><div class="frame-corner c3"></div><div class="frame-corner c4"></div></div>
+      <div class="scene-index"><b>۰۶</b><span>نقشه</span></div>
+    </section>
+
+    <section class="scene arduino-scene" id="arduino" data-scene>
+      <div class="arduino-backdrop"><span class="circuit-line l1"></span><span class="circuit-line l2"></span><span class="circuit-line l3"></span><span class="pulse-dot p1"></span><span class="pulse-dot p2"></span></div>
+      <div class="arduino-copy reveal"><span class="eyebrow">۰۶ / قلب سامانه</span><h2>آردوینو نانو</h2><p>سیگنال حسگر را می‌خواند، فاصله را محاسبه می‌کند و تصمیم می‌گیرد LEDها با چه سرعتی چشمک بزنند.</p><div class="pin-map"><div><b>D10</b><span>فرمان حسگر · TRIG</span></div><div><b>D11</b><span>پاسخ حسگر · ECHO</span></div><div><b>D5 · D6</b><span>کنترل دو LED</span></div><div><b>5V · GND</b><span>تغذیه و مرجع مدار</span></div></div><button class="primary-button" data-go="#code">رسیدن به قلب تپنده <span>←</span></button></div>
+      <div class="arduino-board reveal"><div class="board-aura"></div><img src="arduino.png" alt="برد آردوینو نانو" class="asset-img"><span class="board-label">ARDUINO NANO</span><span class="board-spark"></span></div>
+      <div class="scene-index"><b>۰۷</b><span>پردازش</span></div>
+    </section>
+
+    <section class="scene logic-scene" id="logic" data-scene>
+      <div class="section-heading reveal"><span class="eyebrow">۰۷ / تصمیم‌گیری</span><h2>فاصله، ریتم را انتخاب می‌کند</h2><p>آردوینو مقدار فاصله را با سه بازه مقایسه می‌کند.</p></div>
+      <div class="range-track reveal"><div class="range-segment fast"><span>۰۲—۳۰ cm</span><b>سریع</b><i class="blink-demo"></i></div><div class="range-segment medium"><span>۳۰—۶۰ cm</span><b>متوسط</b><i class="blink-demo"></i></div><div class="range-segment slow"><span>۶۰—۱۰۰ cm</span><b>آهسته</b><i class="blink-demo"></i></div></div>
+      <p class="logic-footnote reveal">بیرون از بازهٔ ۲ تا ۱۰۰ سانتی‌متر یا بدون دریافت پژواک، LEDها خاموش می‌شوند.</p>
+      <div class="scene-index"><b>۰۸</b><span>منطق</span></div>
+    </section>
+
+    <section class="scene code-scene" id="code" data-scene>
+      <div class="code-heading reveal"><div><span class="eyebrow">۰۸ / قلب تپندهٔ سامانه</span><h2>کد، تصمیم را به حرکت تبدیل می‌کند</h2><p>کد کامل در سمت راست است. مرحله‌ها را انتخاب کنید تا توضیح و خط‌های مرتبط برجسته شوند.</p></div><div class="code-badge"><span></span> Arduino C++</div></div>
+      <div class="code-layout">
+        <div class="code-explainer reveal"><div class="step-count" id="stepCount">مرحلهٔ ۱ از ۵</div><h3 id="stepTitle">تعریف پایه‌ها و متغیرها</h3><p id="stepText">شمارهٔ پایه‌های حسگر و LEDها مشخص می‌شود. متغیرها آخرین زمان اندازه‌گیری، وضعیت LEDها و فاصله را نگه می‌دارند.</p><div class="step-controls"><button id="codePrev" aria-label="مرحلهٔ قبل">→</button><div id="stepDots"></div><button id="codeNext" aria-label="مرحلهٔ بعد">←</button></div><div class="code-callout" id="codeCallout">در Nano، پایه‌های D5 و D6 خروجی LEDها هستند.</div></div>
+        <div class="code-window reveal"><div class="window-bar"><div class="window-dots"><i></i><i></i><i></i></div><span>distance_leds.ino</span><button id="copyCode" title="کپی کد">کپی</button></div><pre class="code-scroll" dir="ltr"><code id="fullCode"></code></pre></div>
+      </div>
+      <div class="scene-index"><b>۰۹</b><span>کد</span></div>
+    </section>
+
+    <section class="scene ending" id="ending" data-scene>
+      <div class="ending-orb"></div><div class="ending-copy reveal"><span class="eyebrow">از موج تا نور</span><h2>فاصله،<br><span class="gradient-text">قابل دیدن شد.</span></h2><p>حسگر اندازه می‌گیرد. آردوینو تصمیم می‌گیرد. نور، نتیجه را نشان می‌دهد.</p><div class="ending-chain"><span>حسگر</span><i>→</i><span>پردازش</span><i>→</i><span>بازخورد نوری</span></div><button class="primary-button" data-go="#intro">مشاهدهٔ دوباره <span>↺</span></button></div>
+      <div class="scene-index"><b>۱۰</b><span>پایان</span></div>
+    </section>
+  </main>
+  <nav class="presentation-nav" aria-label="پیمایش ارائه"><button id="previousScene" aria-label="بخش قبلی">↑</button><span id="sceneCounter">۰۱ / ۱۰</span><button id="nextScene" aria-label="بخش بعدی">↓</button></nav>
+  <script src="script.js"></script>
+</body></html>
